@@ -66,9 +66,10 @@ export const LoginForm = () => {
 
             setSuccess(response.data.success);
 
-            setTimeout(() => {
-              navigate("/dashboard");
-            }, 500);
+            const timer = setTimeout(() => {
+              window.location.pathname = "/dashboard";
+            }, 1000);
+            return () => clearTimeout(timer);
           }
         })
         .catch((error) => {

@@ -2,13 +2,7 @@
 
 import * as z from "zod";
 import { useForm } from "react-hook-form";
-import {
-  Dispatch,
-  SetStateAction,
-  useContext,
-  useState,
-  useTransition,
-} from "react";
+import { useState, useTransition } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RegisterSchema } from "../../schemas";
 import {
