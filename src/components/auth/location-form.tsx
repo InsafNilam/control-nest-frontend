@@ -82,7 +82,7 @@ export const LocationForm = ({
           });
       } else {
         authAxios
-          .post(`/api/location/${id}`, { ...values })
+          .post(`/api/location`, { ...values })
           .then((response: AxiosResponse) => {
             console.log("Create successful:", response.data);
 

@@ -1,6 +1,8 @@
 import * as z from "zod";
 
 export const DeviceSchema = z.object({
+  image: z.optional(z.any(z.instanceof(File))),
+  locationId: z.string().optional(),
   type: z.string().min(3, { message: "Type is not long enough" }).trim(),
   status: z.string().min(5, { message: "Status is not long enough" }).trim(),
 });

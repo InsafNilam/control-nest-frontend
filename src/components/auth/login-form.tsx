@@ -65,11 +65,11 @@ export const LoginForm = () => {
             sessionStorage.setItem("user", JSON.stringify(response.data?.user));
 
             setSuccess(response.data.success);
-          }
 
-          setTimeout(() => {
-            navigate("/dashboard");
-          }, 500);
+            setTimeout(() => {
+              navigate("/dashboard");
+            }, 500);
+          }
         })
         .catch((error) => {
           setError("Something went wrong!");
